@@ -1,0 +1,110 @@
+
+Skip to content
+
+    All gists
+    GitHub
+
+    @curiosag
+
+@bmchild bmchild/.gitignore
+Created 3 years ago
+
+4
+3
+
+Code
+Revisions 1
+Stars 4
+
+    Forks 3
+
+Embed URL
+HTTPS clone URL
+You can clone with
+,
+, or
+.
+GitIgnore for a Java Eclipse project
+.gitignore
+# Directories #
+/build/
+/bin/
+target/
+ 
+# OS Files #
+.DS_Store
+ 
+*.class
+ 
+# Package Files #
+*.jar
+*.war
+*.ear
+*.db
+ 
+######################
+# Windows
+######################
+ 
+# Windows image file caches
+Thumbs.db 
+ 
+# Folder config file
+Desktop.ini
+ 
+######################
+# OSX
+######################
+ 
+.DS_Store
+.svn
+ 
+# Thumbnails
+._*
+ 
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+ 
+ 
+######################
+# Eclipse
+######################
+ 
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+/src/main/resources/rebel.xml
+# External tool builders
+.externalToolBuilders/
+ 
+# Locally stored "Eclipse launch configurations"
+*.launch
+ 
+# CDT-specific
+.cproject
+ 
+# PDT-specific
+.buildpath
+@curiosag
+Styling with Markdown is supported
+Write Preview
+
+Attach files by dragging & dropping or selecting them.
+
+    Status API Training Shop Blog About Pricing 
+
+    © 2015 GitHub, Inc. Terms Privacy Security Contact Help 
+
+

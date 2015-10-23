@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# run TestRig
+
+if [ $1 ]; then
+  ./runTest CSV file $1 $2 
+else
+  echo "no grammar file defined"
+fi
+

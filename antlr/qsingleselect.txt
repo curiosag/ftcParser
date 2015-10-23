@@ -1,0 +1,7 @@
+
+SELECT A.a1, A.*, table2.b1, Average(table2.b2), Average(A.a2)
+FROM table1 as A LEFT OUTER JOIN table2 as B ON A.id = table2.id
+LEFT OUTER JOIN table3 ON B.id = table3.id
+group by a.x 
+order by a.x desc;
+

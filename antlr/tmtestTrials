@@ -1,0 +1,4 @@
+#!/bin/bash
+
+gmake Trials
+ttestTrials $1 $2

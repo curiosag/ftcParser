@@ -154,11 +154,15 @@ qualified_column_name : ( table_name '.' )? column_name
 aggregate_exp : ( K_SUM | K_COUNT | K_AVERAGE | K_MAXIMUM | K_MINIMUM ) '(' qualified_column_name ')';
 
 expr
- : qualified_column_name ( '=' | '<' | '<=' | '>' | '>=' ) literal (and_or_or expr)? 
- | qualified_column_name ( K_LIKE | K_MATCHES | K_STARTS K_WITH | K_ENDS K_WITH | K_CONTAINS | K_CONTAINS K_IGNORING K_CASE | K_DOES K_NOT K_CONTAIN | K_NOT K_EQUAL K_TO) string_literal (and_or_or expr)?
- | qualified_column_name K_IN '(' string_literal ( ',' string_literal ) * ')' (and_or_or expr)?
- | qualified_column_name K_BETWEEN literal K_AND literal (and_or_or expr)?
- | K_ST_INTERSECTS '(' qualified_column_name ',' geometry ')'  (and_or_or expr)?
+ : qualified_column_name_in_expression ( '=' | '<' | '<=' | '>' | '>=' ) literal (and_or_or expr)? 
+ | qualified_column_name_in_expression ( K_LIKE | K_MATCHES | K_STARTS K_WITH | K_ENDS K_WITH | K_CONTAINS | K_CONTAINS K_IGNORING K_CASE | K_DOES K_NOT K_CONTAIN | K_NOT K_EQUAL K_TO) string_literal (and_or_or expr)?
+ | qualified_column_name_in_expression K_IN '(' string_literal ( ',' string_literal ) * ')' (and_or_or expr)?
+ | qualified_column_name_in_expression K_BETWEEN literal K_AND literal (and_or_or expr)?
+ | K_ST_INTERSECTS '(' qualified_column_name_in_expression ',' geometry ')' (and_or_or expr)?
+ ;
+
+qualified_column_name_in_expression
+ :  qualified_column_name  
  ;
 
 and_or_or : (K_AND | K_OR) ; 

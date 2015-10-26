@@ -233,6 +233,18 @@ public class FusionTablesSqlBaseListener implements FusionTablesSqlListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterQualified_column_name_in_expression(FusionTablesSqlParser.Qualified_column_name_in_expressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitQualified_column_name_in_expression(FusionTablesSqlParser.Qualified_column_name_in_expressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterAnd_or_or(FusionTablesSqlParser.And_or_orContext ctx) { }
 	/**
 	 * {@inheritDoc}

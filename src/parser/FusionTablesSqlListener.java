@@ -189,6 +189,16 @@ public interface FusionTablesSqlListener extends ParseTreeListener {
 	 */
 	void exitExpr(FusionTablesSqlParser.ExprContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link FusionTablesSqlParser#qualified_column_name_in_expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterQualified_column_name_in_expression(FusionTablesSqlParser.Qualified_column_name_in_expressionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FusionTablesSqlParser#qualified_column_name_in_expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitQualified_column_name_in_expression(FusionTablesSqlParser.Qualified_column_name_in_expressionContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link FusionTablesSqlParser#and_or_or}.
 	 * @param ctx the parse tree
 	 */

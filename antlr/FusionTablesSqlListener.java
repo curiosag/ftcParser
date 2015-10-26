@@ -1,4 +1,5 @@
 // Generated from FusionTablesSql.g4 by ANTLR 4.5
+package parser;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -187,6 +188,16 @@ public interface FusionTablesSqlListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitExpr(FusionTablesSqlParser.ExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FusionTablesSqlParser#qualified_column_name_in_expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterQualified_column_name_in_expression(FusionTablesSqlParser.Qualified_column_name_in_expressionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FusionTablesSqlParser#qualified_column_name_in_expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitQualified_column_name_in_expression(FusionTablesSqlParser.Qualified_column_name_in_expressionContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link FusionTablesSqlParser#and_or_or}.
 	 * @param ctx the parse tree

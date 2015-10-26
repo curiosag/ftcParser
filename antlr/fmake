@@ -1,3 +1,8 @@
 #!/bin/bash
 
 gmake FusionTablesSql package
+
+cd ../src/parser
+echo `pwd`
+`rm *.java`
+`cp ../../antlr/*.java .`

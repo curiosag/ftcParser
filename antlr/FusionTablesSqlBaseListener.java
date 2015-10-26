@@ -1,4 +1,5 @@
 // Generated from FusionTablesSql.g4 by ANTLR 4.5
+package parser;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -227,6 +228,18 @@ public class FusionTablesSqlBaseListener implements FusionTablesSqlListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitExpr(FusionTablesSqlParser.ExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterQualified_column_name_in_expression(FusionTablesSqlParser.Qualified_column_name_in_expressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitQualified_column_name_in_expression(FusionTablesSqlParser.Qualified_column_name_in_expressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

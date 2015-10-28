@@ -80,9 +80,13 @@ sql_stmt
    ) ';' 
  ;
 
+table_name_in_ddl
+ : table_name
+ ;
+
 alter_table_stmt
- : K_ALTER K_TABLE table_name
-   ( K_RENAME K_TO new_table_name )
+ : K_ALTER K_TABLE table_name_in_ddl
+   ( K_RENAME K_TO table_name_in_ddl )
  ;
 
 create_view_stmt
@@ -94,7 +98,7 @@ create_view_stmt
  ;
 
 drop_table_stmt
- : K_DROP K_TABLE table_name
+ : K_DROP K_TABLE table_name_in_ddl
  ;
 
 insert_stmt

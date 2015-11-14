@@ -1,5 +1,4 @@
 // Generated from FusionTablesSql.g4 by ANTLR 4.5
-package parser;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -324,6 +323,18 @@ public class FusionTablesSqlBaseListener implements FusionTablesSqlListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitKeyword(FusionTablesSqlParser.KeywordContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterOperator(FusionTablesSqlParser.OperatorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitOperator(FusionTablesSqlParser.OperatorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

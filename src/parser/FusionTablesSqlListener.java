@@ -269,6 +269,16 @@ public interface FusionTablesSqlListener extends ParseTreeListener {
 	 */
 	void exitKeyword(FusionTablesSqlParser.KeywordContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link FusionTablesSqlParser#operator}.
+	 * @param ctx the parse tree
+	 */
+	void enterOperator(FusionTablesSqlParser.OperatorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FusionTablesSqlParser#operator}.
+	 * @param ctx the parse tree
+	 */
+	void exitOperator(FusionTablesSqlParser.OperatorContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link FusionTablesSqlParser#literal}.
 	 * @param ctx the parse tree
 	 */

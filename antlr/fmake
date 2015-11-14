@@ -3,6 +3,7 @@
 gmake FusionTablesSql package
 
 cd ../src/parser
+echo 'target directory'
 echo `pwd`
 `rm *.java`
 `cp ../../antlr/*.java .`

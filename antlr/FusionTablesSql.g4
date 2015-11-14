@@ -120,7 +120,7 @@ delete_stmt
    ( K_WHERE eq_comparison )?
  ;
 
-eq_comparison : identifier '=' string_literal ;
+eq_comparison : identifier EQ string_literal ;
 
 table_name_with_alias
  : table_name ( K_AS table_alias )?
@@ -158,7 +158,7 @@ qualified_column_name : ( table_name '.' )? column_name
 aggregate_exp : ( K_SUM | K_COUNT | K_AVERAGE | K_MAXIMUM | K_MINIMUM ) '(' qualified_column_name ')';
 
 expr
- : qualified_column_name_in_expression ( '=' | '<' | '<=' | '>' | '>=' ) literal (and_or_or expr)? 
+ : qualified_column_name_in_expression ( operator ) literal (and_or_or expr)? 
  | qualified_column_name_in_expression ( K_LIKE | K_MATCHES | K_STARTS K_WITH | K_ENDS K_WITH | K_CONTAINS | K_CONTAINS K_IGNORING K_CASE | K_DOES K_NOT K_CONTAIN | K_NOT K_EQUAL K_TO) string_literal (and_or_or expr)?
  | qualified_column_name_in_expression K_IN '(' string_literal ( ',' string_literal ) * ')' (and_or_or expr)?
  | qualified_column_name_in_expression K_BETWEEN literal K_AND literal (and_or_or expr)?
@@ -240,6 +240,14 @@ keyword
  | K_WITH
  ;
 
+operator 
+ : LT
+ | LT_EQ
+ | GT
+ | GT_EQ
+ | EQ
+ ;
+
 literal
  : numeric_literal
  | string_literal
@@ -264,7 +272,7 @@ column_name
  ;
 
 new_table_name 
- : identifier
+ : table_name
  ;
 
 view_name 
@@ -279,30 +287,11 @@ numeric_literal : NUMERIC_LITERAL ;
 
 string_literal : STRING_LITERAL ;
 
-SCOL : ';';
-DOT : '.';
-OPEN_PAR : '(';
-CLOSE_PAR : ')';
-COMMA : ',';
-ASSIGN : '=';
-STAR : '*';
-PLUS : '+';
-MINUS : '-';
-TILDE : '~';
-PIPE2 : '||';
-DIV : '/';
-MOD : '%';
-LT2 : '<<';
-GT2 : '>>';
-AMP : '&';
-PIPE : '|';
-LT : '<';
 LT_EQ : '<=';
-GT : '>';
 GT_EQ : '>=';
-EQ : '==';
-NOT_EQ1 : '!=';
-NOT_EQ2 : '<>';
+GT : '>';
+EQ : '=';
+LT : '<';
 
 NUMERIC_LITERAL
  : DIGIT+ ( '.' DIGIT* )? 
@@ -314,7 +303,7 @@ STRING_LITERAL
  | QUOTED_STRING
  ;
 
-STRING : [a-zA-Z_0-9]+ // TODO unicode support
+STRING : ([a-zA-Z_0-9{}])+ // TODO unicode support
 	   ;
 
 QUOTED_STRING

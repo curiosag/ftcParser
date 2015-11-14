@@ -1,5 +1,4 @@
 // Generated from FusionTablesSql.g4 by ANTLR 4.5
-package parser;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
@@ -167,6 +166,12 @@ public interface FusionTablesSqlVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitKeyword(FusionTablesSqlParser.KeywordContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FusionTablesSqlParser#operator}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitOperator(FusionTablesSqlParser.OperatorContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link FusionTablesSqlParser#literal}.
 	 * @param ctx the parse tree

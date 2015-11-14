@@ -168,6 +168,12 @@ public interface FusionTablesSqlVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitKeyword(FusionTablesSqlParser.KeywordContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link FusionTablesSqlParser#operator}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitOperator(FusionTablesSqlParser.OperatorContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link FusionTablesSqlParser#literal}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

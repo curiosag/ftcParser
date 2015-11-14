@@ -329,6 +329,18 @@ public class FusionTablesSqlBaseListener implements FusionTablesSqlListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterOperator(FusionTablesSqlParser.OperatorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitOperator(FusionTablesSqlParser.OperatorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterLiteral(FusionTablesSqlParser.LiteralContext ctx) { }
 	/**
 	 * {@inheritDoc}

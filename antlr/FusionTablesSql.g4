@@ -155,17 +155,17 @@ result_column
 qualified_column_name : ( table_name '.' )? column_name
 ;
  
-aggregate_exp : ( K_SUM | K_COUNT | K_AVERAGE | K_MAXIMUM | K_MINIMUM ) '(' qualified_column_name ')';
+aggregate_exp : ( K_SUM | K_COUNT | K_AVERAGE | K_MAXIMUM | K_MINIMUM ) LPAR qualified_column_name RPAR;
 
 expr
- : qualified_column_name_in_expression ( operator ) literal (and_or_or expr)? 
- | qualified_column_name_in_expression ( K_LIKE | K_MATCHES | K_STARTS K_WITH | K_ENDS K_WITH | K_CONTAINS | K_CONTAINS K_IGNORING K_CASE | K_DOES K_NOT K_CONTAIN | K_NOT K_EQUAL K_TO) string_literal (and_or_or expr)?
- | qualified_column_name_in_expression K_IN '(' string_literal ( ',' string_literal ) * ')' (and_or_or expr)?
- | qualified_column_name_in_expression K_BETWEEN literal K_AND literal (and_or_or expr)?
- | K_ST_INTERSECTS '(' qualified_column_name_in_expression ',' geometry ')' (and_or_or expr)?
+ : column_name_beginning_expr ( operator ) literal (and_or_or expr)? 
+ | column_name_beginning_expr ( K_LIKE | K_MATCHES | K_STARTS K_WITH | K_ENDS K_WITH | K_CONTAINS | K_CONTAINS K_IGNORING K_CASE | K_DOES K_NOT K_CONTAIN | K_NOT K_EQUAL K_TO) string_literal (and_or_or expr)?
+ | column_name_beginning_expr K_IN '(' string_literal ( ',' string_literal ) * ')' (and_or_or expr)?
+ | column_name_beginning_expr K_BETWEEN literal K_AND literal (and_or_or expr)?
+ | K_ST_INTERSECTS LPAR qualified_column_name ',' geometry RPAR (and_or_or expr)?
  ;
 
-qualified_column_name_in_expression
+column_name_beginning_expr
  :  qualified_column_name  
  ;
 
@@ -292,6 +292,8 @@ GT_EQ : '>=';
 GT : '>';
 EQ : '=';
 LT : '<';
+LPAR : '(';
+RPAR : ')';
 
 NUMERIC_LITERAL
  : DIGIT+ ( '.' DIGIT* )? 

@@ -16,5 +16,16 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="/JavaCommon"/>
+	<classpathentry kind="lib" path="/home/sp/.m2/repository/com/google/guava/guava/18.0/guava-18.0.jar" sourcepath="/home/sp/.m2/repository/com/google/guava/guava/18.0/guava-18.0-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="javadoc_location" value="jar:file:/home/sp/.m2/repository/com/google/guava/guava/18.0/guava-18.0-javadoc.jar!/"/>
+			<attribute name="maven.groupId" value="com.google.guava"/>
+			<attribute name="maven.artifactId" value="guava"/>
+			<attribute name="maven.version" value="18.0"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

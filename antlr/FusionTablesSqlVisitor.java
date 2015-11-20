@@ -125,11 +125,11 @@ public interface FusionTablesSqlVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitExpr(FusionTablesSqlParser.ExprContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link FusionTablesSqlParser#qualified_column_name_in_expression}.
+	 * Visit a parse tree produced by {@link FusionTablesSqlParser#column_name_beginning_expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitQualified_column_name_in_expression(FusionTablesSqlParser.Qualified_column_name_in_expressionContext ctx);
+	T visitColumn_name_beginning_expr(FusionTablesSqlParser.Column_name_beginning_exprContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link FusionTablesSqlParser#and_or_or}.
 	 * @param ctx the parse tree

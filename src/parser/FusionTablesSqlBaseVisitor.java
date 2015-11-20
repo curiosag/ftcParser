@@ -151,7 +151,7 @@ public class FusionTablesSqlBaseVisitor<T> extends AbstractParseTreeVisitor<T> i
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitQualified_column_name_in_expression(FusionTablesSqlParser.Qualified_column_name_in_expressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitColumn_name_beginning_expr(FusionTablesSqlParser.Column_name_beginning_exprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

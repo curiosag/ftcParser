@@ -1,4 +1,5 @@
 // Generated from FusionTablesSql.g4 by ANTLR 4.5
+package parser;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -352,7 +353,7 @@ public class FusionTablesSqlLexer extends Lexer {
 		"\2\2\u027c\u027a\3\2\2\2\u027d\u027e\7,\2\2\u027e\u0281\7\61\2\2\u027f"+
 		"\u0281\7\2\2\3\u0280\u027d\3\2\2\2\u0280\u027f\3\2\2\2\u0281\u0282\3\2"+
 		"\2\2\u0282\u0283\bK\2\2\u0283\u0096\3\2\2\2\u0284\u0285\t\6\2\2\u0285"+
-		"\u0286\3\2\2\2\u0286\u0287\bL\2\2\u0287\u0098\3\2\2\2\u0288\u0289\t\7"+
+		"\u0286\3\2\2\2\u0286\u0287\bL\3\2\u0287\u0098\3\2\2\2\u0288\u0289\t\7"+
 		"\2\2\u0289\u009a\3\2\2\2\u028a\u028b\t\b\2\2\u028b\u009c\3\2\2\2\u028c"+
 		"\u028d\t\t\2\2\u028d\u009e\3\2\2\2\u028e\u028f\t\n\2\2\u028f\u00a0\3\2"+
 		"\2\2\u0290\u0291\t\13\2\2\u0291\u00a2\3\2\2\2\u0292\u0293\t\f\2\2\u0293"+
@@ -369,7 +370,7 @@ public class FusionTablesSqlLexer extends Lexer {
 		"\u02b7\t\36\2\2\u02b7\u00c8\3\2\2\2\u02b8\u02b9\t\37\2\2\u02b9\u00ca\3"+
 		"\2\2\2\u02ba\u02bb\t \2\2\u02bb\u00cc\3\2\2\2\u02bc\u02bd\t!\2\2\u02bd"+
 		"\u00ce\3\2\2\2\16\2\u0246\u024c\u024f\u0253\u0257\u025c\u0262\u0264\u026f"+
-		"\u027a\u0280\3\2\3\2";
+		"\u027a\u0280\4\2\3\2\2M\2";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

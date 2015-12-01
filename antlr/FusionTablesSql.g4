@@ -321,8 +321,10 @@ MULTILINE_COMMENT
  ;
 
 WHITESPACE
- : [ \u000B\t\r\n] -> channel(HIDDEN)
+ : [ \u000B\t\r\n] -> channel(WHITESPACE)
  ;
+
+
 
 fragment DIGIT : [0-9];
 fragment A : [aA];
@@ -351,3 +353,4 @@ fragment W : [wW];
 fragment X : [xX];
 fragment Y : [yY];
 fragment Z : [zZ];
+

@@ -53,6 +53,18 @@ public class FusionTablesSqlBaseListener implements FusionTablesSqlListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterTable_name_in_dml(FusionTablesSqlParser.Table_name_in_dmlContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTable_name_in_dml(FusionTablesSqlParser.Table_name_in_dmlContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterAlter_table_stmt(FusionTablesSqlParser.Alter_table_stmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -252,6 +264,18 @@ public class FusionTablesSqlBaseListener implements FusionTablesSqlListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitColumn_name_beginning_expr(FusionTablesSqlParser.Column_name_beginning_exprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterColumn_name_in_dml(FusionTablesSqlParser.Column_name_in_dmlContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitColumn_name_in_dml(FusionTablesSqlParser.Column_name_in_dmlContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

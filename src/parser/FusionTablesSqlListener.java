@@ -39,6 +39,16 @@ public interface FusionTablesSqlListener extends ParseTreeListener {
 	 */
 	void exitTable_name_in_ddl(FusionTablesSqlParser.Table_name_in_ddlContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link FusionTablesSqlParser#table_name_in_dml}.
+	 * @param ctx the parse tree
+	 */
+	void enterTable_name_in_dml(FusionTablesSqlParser.Table_name_in_dmlContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FusionTablesSqlParser#table_name_in_dml}.
+	 * @param ctx the parse tree
+	 */
+	void exitTable_name_in_dml(FusionTablesSqlParser.Table_name_in_dmlContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link FusionTablesSqlParser#alter_table_stmt}.
 	 * @param ctx the parse tree
 	 */
@@ -208,6 +218,16 @@ public interface FusionTablesSqlListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitColumn_name_beginning_expr(FusionTablesSqlParser.Column_name_beginning_exprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FusionTablesSqlParser#column_name_in_dml}.
+	 * @param ctx the parse tree
+	 */
+	void enterColumn_name_in_dml(FusionTablesSqlParser.Column_name_in_dmlContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FusionTablesSqlParser#column_name_in_dml}.
+	 * @param ctx the parse tree
+	 */
+	void exitColumn_name_in_dml(FusionTablesSqlParser.Column_name_in_dmlContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link FusionTablesSqlParser#and_or_or}.
 	 * @param ctx the parse tree

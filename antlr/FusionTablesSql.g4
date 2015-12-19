@@ -83,6 +83,10 @@ sql_stmt
 table_name_in_ddl
  : table_name
  ;
+ 
+table_name_in_dml
+ : table_name
+ ;
 
 alter_table_stmt
  : K_ALTER K_TABLE table_name_in_ddl
@@ -103,21 +107,21 @@ drop_table_stmt
 
 insert_stmt
   : K_INSERT  K_INTO
-   table_name ( '(' column_name ( ',' column_name )* ')' )
+   table_name_in_dml ( '(' column_name_in_dml ( ',' column_name_in_dml )* ')' )
    ( K_VALUES '(' literal ( ',' literal)* ')' )
  ;
 
 update_stmt
- : K_UPDATE table_name
+ : K_UPDATE table_name_in_dml
    K_SET column_assignment ( ',' column_assignment )* 
    K_WHERE eq_comparison
  ;
 
-column_assignment : column_name '=' literal ;
+column_assignment : column_name_in_dml '=' literal ;
 
 delete_stmt
- : K_DELETE K_FROM table_name 
-   ( K_WHERE eq_comparison )?
+ : K_DELETE K_FROM table_name_in_dml 
+   ( K_WHERE column_name_in_dml '=' literal)?
  ;
 
 eq_comparison : identifier EQ string_literal ;
@@ -167,6 +171,10 @@ expr
 
 column_name_beginning_expr
  :  qualified_column_name  
+ ;
+
+column_name_in_dml
+ :  column_name  
  ;
 
 and_or_or : (K_AND | K_OR) ; 

@@ -30,6 +30,12 @@ public interface FusionTablesSqlVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitTable_name_in_ddl(FusionTablesSqlParser.Table_name_in_ddlContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link FusionTablesSqlParser#table_name_in_dml}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTable_name_in_dml(FusionTablesSqlParser.Table_name_in_dmlContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link FusionTablesSqlParser#alter_table_stmt}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -131,6 +137,12 @@ public interface FusionTablesSqlVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitColumn_name_beginning_expr(FusionTablesSqlParser.Column_name_beginning_exprContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FusionTablesSqlParser#column_name_in_dml}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitColumn_name_in_dml(FusionTablesSqlParser.Column_name_in_dmlContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link FusionTablesSqlParser#and_or_or}.
 	 * @param ctx the parse tree

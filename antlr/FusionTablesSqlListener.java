@@ -49,6 +49,16 @@ public interface FusionTablesSqlListener extends ParseTreeListener {
 	 */
 	void exitTable_name_in_dml(FusionTablesSqlParser.Table_name_in_dmlContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link FusionTablesSqlParser#describe_stmt}.
+	 * @param ctx the parse tree
+	 */
+	void enterDescribe_stmt(FusionTablesSqlParser.Describe_stmtContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FusionTablesSqlParser#describe_stmt}.
+	 * @param ctx the parse tree
+	 */
+	void exitDescribe_stmt(FusionTablesSqlParser.Describe_stmtContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link FusionTablesSqlParser#alter_table_stmt}.
 	 * @param ctx the parse tree
 	 */

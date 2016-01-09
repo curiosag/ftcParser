@@ -24,6 +24,7 @@ K_COUNT : C O U N T;
 K_CREATE : C R E A T E;
 K_DELETE : D E L E T E;
 K_DESC : D E S C;
+K_DESCRIBE : D E S C R I B E;
 K_DOES : D O E S;
 K_CONTAIN : C O N T A I N;
 K_DROP : D R O P;
@@ -77,6 +78,7 @@ sql_stmt
     | drop_table_stmt
     | insert_stmt
     | update_stmt
+    | describe_stmt
    ) ';' 
  ;
 
@@ -86,6 +88,10 @@ table_name_in_ddl
  
 table_name_in_dml
  : table_name
+ ;
+
+describe_stmt
+ : K_DESCRIBE table_name_in_ddl
  ;
 
 alter_table_stmt
@@ -313,7 +319,7 @@ STRING_LITERAL
  | QUOTED_STRING
  ;
 
-STRING : ([a-zA-Z_0-9{}])+ // TODO unicode support
+STRING : ([a-zA-Z_0-9] | '-')+ // TODO unicode support
 	   ;
 
 QUOTED_STRING

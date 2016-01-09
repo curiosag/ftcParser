@@ -58,8 +58,10 @@ K_SELECT : S E L E C T;
 K_ST_INTERSECTS : S T '_' I N T E R S E C T S;
 K_SUM : S U M;
 K_SET : S E T;
+K_SHOW : S H O W;
 K_STARTS : S T A R T S;
 K_TABLE : T A B L E;
+K_TABLES : T A B L E S;
 K_TO : T O;
 K_UPDATE : U P D A T E;
 K_VALUES : V A L U E S;
@@ -79,6 +81,7 @@ sql_stmt
     | insert_stmt
     | update_stmt
     | describe_stmt
+    | show_tables_stmt
    ) ';' 
  ;
 
@@ -92,6 +95,10 @@ table_name_in_dml
 
 describe_stmt
  : K_DESCRIBE table_name_in_ddl
+ ;
+
+show_tables_stmt
+ : K_SHOW K_TABLES
  ;
 
 alter_table_stmt

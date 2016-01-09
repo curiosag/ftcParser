@@ -42,6 +42,12 @@ public interface FusionTablesSqlVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitDescribe_stmt(FusionTablesSqlParser.Describe_stmtContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link FusionTablesSqlParser#show_tables_stmt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitShow_tables_stmt(FusionTablesSqlParser.Show_tables_stmtContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link FusionTablesSqlParser#alter_table_stmt}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

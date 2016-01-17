@@ -1,10 +1,11 @@
-package parser;
+package org.cg.ftc.parser;
 
 import java.util.Stack;
 
 import org.antlr.v4.runtime.ParserRuleContext;
+import org.cg.common.check.Check;
+
 import com.google.common.base.Optional;
-import cg.common.check.Check;
 
 public class Ctx {
 

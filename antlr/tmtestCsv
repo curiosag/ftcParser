@@ -1,4 +1,0 @@
-#!/bin/bash
-
-gmake CSV
-ttestCSV $1 $2
